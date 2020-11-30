@@ -1,0 +1,12 @@
+package com.mp_tests.projectdummy;
+
+import java.lang.Number;
+
+rule "ExampleGuidedRule"
+	dialect "mvel"
+	when
+		od : ObjectDummy( input_string == "Hello" )
+	then
+		od.setOutput_boolean( true );
+		od.setOutput_string( "Input string is: Hello" );
+end
